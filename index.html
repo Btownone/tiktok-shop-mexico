@@ -40,6 +40,7 @@
   body.en span.lang-en,body.en a.lang-en{display:inline}
 
   /* header */
+  .ribbon{background:var(--grad);color:#0a0a0f;text-align:center;font-weight:800;font-size:.82rem;padding:7px 14px;letter-spacing:.02em}
   header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
     background:rgba(10,10,15,.74);border-bottom:1px solid var(--line)}
   .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0}
@@ -194,6 +195,7 @@
 <body>
 
 <div class="no-print">
+<div class="ribbon"><span class="lang-es">✦ Invitación exclusiva — solo para amigos y familia · cupos limitados</span><span class="lang-en">✦ Exclusive invite — friends &amp; family only · limited spots</span></div>
 <header>
   <div class="wrap bar">
     <div class="brand"><img class="logo" src="img/logo-icon.png" alt="" /> TikTienda</div>
@@ -210,7 +212,7 @@
 <!-- ===================== HERO (shared shell, bilingual text) ===================== -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">🇲🇽 <span class="lang-es">TikTok Shop está explotando en México</span><span class="lang-en">TikTok Shop is booming in Mexico</span></span>
+    <span class="eyebrow">🔒 <span class="lang-es">Invitación exclusiva · amigos y familia</span><span class="lang-en">Exclusive invite · friends &amp; family</span></span>
 
     <div class="lang-es">
       <h1>Lanza tu propia tienda en <span class="grad-text">TikTok Shop México</span></h1>
@@ -527,8 +529,8 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker"><span class="lang-es">Aplica hoy</span><span class="lang-en">Apply today</span></div>
-      <div class="lang-es"><h2>Aplica para ser socio</h2><p>Déjanos tus datos y te contactamos con los siguientes pasos. Toma 30 segundos.</p></div>
-      <div class="lang-en"><h2>Apply to become a partner</h2><p>Leave your details and we'll reach out with next steps. Takes 30 seconds.</p></div>
+      <div class="lang-es"><h2>Aplica para ser socio</h2><p>Estamos abriendo solo unos cuantos lugares para gente de confianza. Déjanos tus datos y te contactamos. Toma 30 segundos.</p></div>
+      <div class="lang-en"><h2>Apply to become a partner</h2><p>We're opening just a few spots for people we trust. Leave your details and we'll reach out. Takes 30 seconds.</p></div>
     </div>
 
     <form class="apply" id="applyForm" onsubmit="return submitApply(event)">
@@ -592,7 +594,7 @@
 <div class="flyer">
   <div class="flyer-head">
     <div class="flyer-logo"><img class="lg" src="img/logo-icon.png" alt="" /> TikTienda</div>
-    <div style="text-align:right;font-size:8.5pt;color:#555">🇲🇽 TikTok Shop México · 2026</div>
+    <div style="text-align:right;font-size:8.5pt;color:#555">🔒 Invitación exclusiva<br>amigos y familia · 2026</div>
   </div>
   <h1>Lanza tu propia tienda en TikTok Shop México</h1>
   <p class="sub"><em>Launch your own store on TikTok Shop Mexico — partner with a team already selling.</em></p>
