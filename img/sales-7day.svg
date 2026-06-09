@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1000" height="560" rx="22" fill="#0a0e16"/>
+  <rect x="1" y="1" width="998" height="558" rx="21" fill="none" stroke="#1c2433"/>
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#25f4ee"/>
+      <stop offset="1" stop-color="#1b7f7a"/>
+    </linearGradient>
+  </defs>
+
+  <text x="44" y="56" fill="#fe2c55" font-size="14" font-weight="700" letter-spacing="2">VENTAS REALES · REAL SALES</text>
+  <text x="44" y="90" fill="#f3f4f8" font-size="27" font-weight="800">Resumen de ventas — últimos 6 días</text>
+  <text x="44" y="114" fill="#8a8a9c" font-size="15">TikTok Shop México · pedidos por día</text>
+
+  <!-- gridlines -->
+  <line x1="80" y1="170" x2="700" y2="170" stroke="#19212e"/>
+  <line x1="80" y1="270" x2="700" y2="270" stroke="#19212e"/>
+  <line x1="80" y1="370" x2="700" y2="370" stroke="#19212e"/>
+  <line x1="80" y1="470" x2="700" y2="470" stroke="#2a3547"/>
+  <text x="70" y="174" fill="#5d6577" font-size="12" text-anchor="end">90</text>
+  <text x="70" y="274" fill="#5d6577" font-size="12" text-anchor="end">60</text>
+  <text x="70" y="374" fill="#5d6577" font-size="12" text-anchor="end">30</text>
+  <text x="70" y="474" fill="#5d6577" font-size="12" text-anchor="end">0</text>
+
+  <!-- bars -->
+  <g>
+    <rect x="95"  y="297" width="62" height="173" rx="8" fill="url(#bar)"/>
+    <rect x="203" y="190" width="62" height="280" rx="8" fill="url(#bar)"/>
+    <rect x="311" y="227" width="62" height="243" rx="8" fill="url(#bar)"/>
+    <rect x="419" y="230" width="62" height="240" rx="8" fill="url(#bar)"/>
+    <rect x="527" y="257" width="62" height="213" rx="8" fill="url(#bar)"/>
+    <rect x="635" y="180" width="62" height="290" rx="8" fill="url(#bar)"/>
+  </g>
+  <g fill="#25f4ee" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="126" y="285">52</text>
+    <text x="234" y="178">84</text>
+    <text x="342" y="215">73</text>
+    <text x="450" y="218">72</text>
+    <text x="558" y="245">64</text>
+    <text x="666" y="168">87</text>
+  </g>
+  <g fill="#9aa2b1" font-size="14" text-anchor="middle">
+    <text x="126" y="495">01 jun</text>
+    <text x="234" y="495">04 jun</text>
+    <text x="342" y="495">05 jun</text>
+    <text x="450" y="495">06 jun</text>
+    <text x="558" y="495">07 jun</text>
+    <text x="666" y="495">08 jun</text>
+  </g>
+
+  <!-- totals panel -->
+  <rect x="740" y="150" width="220" height="320" rx="16" fill="#0e1420" stroke="#1c2433"/>
+  <text x="850" y="192" fill="#8a8a9c" font-size="13" letter-spacing="1" text-anchor="middle">TOTAL · 6 DÍAS</text>
+  <text x="850" y="250" fill="#25f4ee" font-size="56" font-weight="800" text-anchor="middle">432</text>
+  <text x="850" y="278" fill="#c7ccd6" font-size="15" text-anchor="middle">pedidos totales</text>
+  <line x1="770" y1="300" x2="930" y2="300" stroke="#1c2433"/>
+  <text x="850" y="342" fill="#f3f4f8" font-size="26" font-weight="700" text-anchor="middle">¥16,247</text>
+  <text x="850" y="364" fill="#8a8a9c" font-size="13" text-anchor="middle">ventas totales (¥)</text>
+  <line x1="770" y1="386" x2="930" y2="386" stroke="#1c2433"/>
+  <text x="850" y="428" fill="#fe2c55" font-size="26" font-weight="800" text-anchor="middle">72</text>
+  <text x="850" y="450" fill="#8a8a9c" font-size="13" text-anchor="middle">pedidos/día promedio</text>
+
+  <text x="44" y="540" fill="#5d6577" font-size="12">Datos reales del panel de ventas · 01–08 jun 2026</text>
+</svg>

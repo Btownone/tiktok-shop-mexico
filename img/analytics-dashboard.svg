@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 460" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#25f4ee" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#25f4ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="460" rx="20" fill="#0a0e16"/>
+  <rect x="1" y="1" width="1098" height="458" rx="19" fill="none" stroke="#1c2433"/>
+
+  <!-- header -->
+  <text x="40" y="50" fill="#f3f4f8" font-size="26" font-weight="800">Panel de ventas en vivo</text>
+  <text x="40" y="76" fill="#8a8a9c" font-size="14">TikTok Shop · México · actualizado en tiempo real</text>
+  <rect x="935" y="30" width="125" height="32" rx="16" fill="#fe2c55" fill-opacity="0.14" stroke="#fe2c55"/>
+  <circle cx="958" cy="46" r="5" fill="#fe2c55"/>
+  <text x="972" y="51" fill="#fe2c55" font-size="13" font-weight="700">EN VIVO</text>
+
+  <!-- KPI A -->
+  <rect x="40" y="100" width="300" height="150" rx="14" fill="#0e1420" stroke="#1c2433"/>
+  <text x="62" y="135" fill="#8a8a9c" font-size="13" letter-spacing="1">PEDIDOS HOY</text>
+  <text x="62" y="200" fill="#25f4ee" font-size="58" font-weight="800">87</text>
+  <text x="62" y="230" fill="#36d399" font-size="14">▲ creciendo cada día</text>
+
+  <!-- KPI B -->
+  <rect x="360" y="100" width="300" height="150" rx="14" fill="#0e1420" stroke="#1c2433"/>
+  <text x="382" y="135" fill="#8a8a9c" font-size="13" letter-spacing="1">VENTAS HOY (¥)</text>
+  <text x="382" y="200" fill="#f3f4f8" font-size="50" font-weight="800">3,595</text>
+  <text x="382" y="230" fill="#8a8a9c" font-size="14">GMV del día</text>
+
+  <!-- chart -->
+  <rect x="680" y="100" width="380" height="150" rx="14" fill="#0e1420" stroke="#1c2433"/>
+  <text x="702" y="132" fill="#8a8a9c" font-size="13" letter-spacing="1">TENDENCIA</text>
+  <path d="M702,235 L702,210 730,200 760,214 790,184 820,196 850,170 880,200 910,176 940,158 970,186 1000,150 1038,166 L1038,235 Z" fill="url(#area)"/>
+  <polyline points="702,210 730,200 760,214 790,184 820,196 850,170 880,200 910,176 940,158 970,186 1000,150 1038,166" fill="none" stroke="#25f4ee" stroke-width="2.5"/>
+
+  <!-- top stores -->
+  <rect x="40" y="270" width="1020" height="150" rx="14" fill="#0e1420" stroke="#1c2433"/>
+  <text x="62" y="305" fill="#8a8a9c" font-size="13" letter-spacing="1">TOP TIENDAS</text>
+  <g font-size="16" fill="#dfe3ea">
+    <text x="62" y="350" font-weight="700">Tienda 01</text>
+    <text x="300" y="350" fill="#9aa2b1">TikTok</text>
+    <text x="480" y="350">79 pedidos</text>
+    <text x="700" y="350" fill="#25f4ee" font-weight="700">¥3,196</text>
+    <rect x="840" y="338" width="180" height="14" rx="7" fill="#101826"/>
+    <rect x="840" y="338" width="180" height="14" rx="7" fill="#25f4ee"/>
+
+    <text x="62" y="396" font-weight="700">Tienda 02</text>
+    <text x="300" y="396" fill="#9aa2b1">TikTok</text>
+    <text x="480" y="396">8 pedidos</text>
+    <text x="700" y="396" fill="#25f4ee" font-weight="700">¥399</text>
+    <rect x="840" y="384" width="180" height="14" rx="7" fill="#101826"/>
+    <rect x="840" y="384" width="24" height="14" rx="7" fill="#fe2c55"/>
+  </g>
+  <line x1="62" y1="368" x2="1020" y2="368" stroke="#172030"/>
+</svg>

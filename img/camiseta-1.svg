@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="Arial, Helvetica, sans-serif">
+  <defs><radialGradient id="bg1" cx="50%" cy="38%" r="70%">
+    <stop offset="0" stop-color="#1a2030"/><stop offset="1" stop-color="#0c1018"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#bg1)"/>
+  <path d="M140 92 L172 72 C188 96 212 96 228 72 L260 92 L312 142 L280 176 L262 158 L262 332 L138 332 L138 158 L120 176 L88 142 Z"
+        fill="#15181d" stroke="#2b2f37" stroke-width="2"/>
+  <path d="M172 72 C188 96 212 96 228 72" fill="none" stroke="#3a3f49" stroke-width="3"/>
+  <!-- soccer ball -->
+  <circle cx="200" cy="222" r="42" fill="#f4f4f4" stroke="#cdcdcd" stroke-width="2"/>
+  <polygon points="200,200 214,210 209,227 191,227 186,210" fill="#15181d"/>
+  <g fill="#15181d">
+    <polygon points="200,184 207,193 196,196 193,189"/>
+    <polygon points="228,212 224,224 215,217 220,208"/>
+    <polygon points="216,248 205,243 213,235 222,240"/>
+    <polygon points="184,248 195,243 187,235 178,240"/>
+    <polygon points="172,212 176,224 185,217 180,208"/>
+  </g>
+  <text x="200" y="300" fill="#9aa2b1" font-size="15" font-weight="700" letter-spacing="3" text-anchor="middle">FÚTBOL</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="Arial, Helvetica, sans-serif">
+  <defs><radialGradient id="bg4" cx="50%" cy="38%" r="70%">
+    <stop offset="0" stop-color="#222a3a"/><stop offset="1" stop-color="#0c1018"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#bg4)"/>
+  <path d="M140 92 L172 72 C188 96 212 96 228 72 L260 92 L312 142 L280 176 L262 158 L262 332 L138 332 L138 158 L120 176 L88 142 Z"
+        fill="#f3f3f0" stroke="#d4d4cc" stroke-width="2"/>
+  <path d="M172 72 C188 96 212 96 228 72" fill="none" stroke="#cfcfc6" stroke-width="3"/>
+  <text x="200" y="158" fill="#222" font-size="20" font-weight="800" letter-spacing="3" text-anchor="middle">I LOVE</text>
+  <path d="M200 232 C178 210 152 206 152 184 C152 168 170 162 200 184 C230 162 248 168 248 184 C248 206 222 210 200 232 Z" fill="#ce1126"/>
+  <text x="200" y="280" fill="#006847" font-size="26" font-weight="800" letter-spacing="2" text-anchor="middle">MÉXICO</text>
+</svg>

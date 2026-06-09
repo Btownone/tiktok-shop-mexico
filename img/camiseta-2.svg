@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="Arial, Helvetica, sans-serif">
+  <defs><radialGradient id="bg2" cx="50%" cy="38%" r="70%">
+    <stop offset="0" stop-color="#222a3a"/><stop offset="1" stop-color="#0c1018"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#bg2)"/>
+  <path d="M140 92 L172 72 C188 96 212 96 228 72 L260 92 L312 142 L280 176 L262 158 L262 332 L138 332 L138 158 L120 176 L88 142 Z"
+        fill="#f3f3f0" stroke="#d4d4cc" stroke-width="2"/>
+  <path d="M172 72 C188 96 212 96 228 72" fill="none" stroke="#cfcfc6" stroke-width="3"/>
+  <!-- star (México vibe) -->
+  <polygon points="200,180 211,212 245,212 218,233 228,266 200,246 172,266 182,233 155,212 189,212"
+           fill="#006847" stroke="#ce1126" stroke-width="2"/>
+  <text x="200" y="300" fill="#7a7f88" font-size="16" font-weight="800" letter-spacing="4" text-anchor="middle">MÉXICO</text>
+</svg>

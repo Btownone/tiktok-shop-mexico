@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="Arial, Helvetica, sans-serif">
+  <defs><radialGradient id="bg3" cx="50%" cy="38%" r="70%">
+    <stop offset="0" stop-color="#1a2030"/><stop offset="1" stop-color="#0c1018"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#bg3)"/>
+  <path d="M140 92 L172 72 C188 96 212 96 228 72 L260 92 L312 142 L280 176 L262 158 L262 332 L138 332 L138 158 L120 176 L88 142 Z"
+        fill="#1b2a4a" stroke="#2c4070" stroke-width="2"/>
+  <path d="M172 72 C188 96 212 96 228 72" fill="none" stroke="#33508a" stroke-width="3"/>
+  <!-- lightning -->
+  <polygon points="205,178 176,240 198,240 188,290 230,222 206,222 222,178" fill="#ffd23f" stroke="#e9b400" stroke-width="2"/>
+  <text x="200" y="312" fill="#8fa0c4" font-size="15" font-weight="700" letter-spacing="3" text-anchor="middle">GRÁFICA</text>
+</svg>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Socios TikTok Shop México — Lanza tu propia tienda</title>
+<meta name="description" content="Asóciate con un equipo internacional de e-commerce que ya genera ventas en TikTok Shop México. Tú eres dueño de la tienda; nosotros operamos, fabricamos y enviamos." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --bg:#0a0a0f;--bg-2:#101019;--card:#16161f;--ink:#f5f5fa;--ink-soft:#bcbcca;--ink-mute:#8a8a9c;
+    --pink:#fe2c55;--cyan:#25f4ee;--green:#25d366;--line:rgba(255,255,255,.09);
+    --radius:18px;--maxw:1060px;--grad:linear-gradient(105deg,var(--cyan),var(--pink));
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1200px 700px at 85% -10%,rgba(37,244,238,.10),transparent 55%),
+               radial-gradient(900px 600px at -5% 0%,rgba(254,44,85,.12),transparent 50%),var(--bg);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{line-height:1.14;margin:0 0 .45em;font-weight:800;letter-spacing:-.02em}
+  h1{font-size:clamp(2rem,5.2vw,3.4rem)}
+  h2{font-size:clamp(1.55rem,3.4vw,2.25rem)}
+  h3{font-size:1.15rem}
+  p{margin:0 0 1em;color:var(--ink-soft)}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  a{color:inherit}
+  .muted{color:var(--ink-mute)}
+  .big-lead{font-size:clamp(1.05rem,2.1vw,1.3rem)}
+
+  /* language visibility */
+  .lang-en{display:none}
+  body.en .lang-es{display:none}
+  body.en .lang-en{display:block}
+  span.lang-es,span.lang-en,a.lang-es,a.lang-en{display:none}
+  span.lang-es,a.lang-es{display:inline}
+  body.en span.lang-es,body.en a.lang-es{display:none}
+  body.en span.lang-en,body.en a.lang-en{display:inline}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+    background:rgba(10,10,15,.74);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+  .logo{width:34px;height:34px;border-radius:10px;background:var(--grad);display:grid;place-items:center;font-weight:900;color:#0a0a0f;font-size:18px}
+  .bar-actions{display:flex;align-items:center;gap:10px}
+  .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .toggle button{background:transparent;color:var(--ink-soft);border:0;padding:7px 13px;cursor:pointer;font:inherit;font-weight:700;font-size:.85rem}
+  .toggle button.active{background:var(--ink);color:#0a0a0f}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;font:inherit;font-weight:700;
+    padding:13px 22px;border-radius:999px;text-decoration:none;transition:transform .12s,box-shadow .12s;white-space:nowrap}
+  .btn:active{transform:translateY(1px)}
+  .btn-wa{background:var(--green);color:#06310f;box-shadow:0 10px 24px rgba(37,211,102,.28)}
+  .btn-wa:hover{box-shadow:0 14px 30px rgba(37,211,102,.42)}
+  .btn-primary{background:var(--grad);color:#0a0a0f;box-shadow:0 10px 26px rgba(254,44,85,.32)}
+  .btn-primary:hover{box-shadow:0 16px 34px rgba(254,44,85,.45)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:rgba(255,255,255,.35)}
+  .btn-sm{padding:8px 14px;font-size:.9rem}
+  .svg-wa{width:20px;height:20px}
+
+  /* layout helpers */
+  section{padding:50px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem;color:var(--cyan);
+    border:1px solid rgba(37,244,238,.35);background:rgba(37,244,238,.07);padding:6px 14px;border-radius:999px;margin-bottom:16px}
+  .kicker{color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:10px}
+  .section-head{max-width:680px;margin-bottom:26px}
+  .alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 15px;font-weight:600;color:var(--ink-soft);font-size:.95rem}
+
+  /* hero */
+  .hero{padding:58px 0 26px}
+  .hero h1{margin-bottom:.3em}
+  .hero .sub{font-size:clamp(1.1rem,2.3vw,1.45rem);font-weight:700;color:var(--ink);max-width:720px;margin-bottom:.5em}
+  .hero .lead{max-width:660px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .notbox{margin-top:20px;border-left:3px solid var(--pink);padding:8px 0 8px 16px;color:var(--ink-soft);max-width:680px}
+  .notbox strong{color:var(--ink)}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 4px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .stat .n{font-size:clamp(1.25rem,2.6vw,1.7rem);font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .l{font-size:.86rem;color:var(--ink-mute)}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* cards / grids */
+  .grid{display:grid;gap:16px}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:820px){.grid-2,.grid-3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:24px;
+    background:linear-gradient(135deg,rgba(37,244,238,.18),rgba(254,44,85,.18));margin-bottom:12px}
+  .card p{margin:0;font-size:.97rem}
+
+  /* checklists */
+  ul.check{list-style:none;margin:0;padding:0}
+  ul.check li{position:relative;padding:7px 0 7px 30px;color:var(--ink-soft)}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:7px;color:var(--cyan);font-weight:900}
+  ul.cross li::before{content:"✕";color:var(--ink-mute)}
+  ul.dot li::before{content:"•";color:var(--pink);font-size:1.3em;top:3px}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:820px){.two-col{grid-template-columns:1fr}}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;counter-reset:step;margin-top:8px}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 58px}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:14px;
+    width:32px;height:32px;border-radius:9px;background:var(--grad);color:#0a0a0f;font-weight:900;display:grid;place-items:center}
+  .step b{display:block;color:var(--ink);margin-bottom:2px}
+
+  /* proof gallery */
+  .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+  @media(max-width:820px){.proof{grid-template-columns:1fr}}
+  .shot{aspect-ratio:16/10;border-radius:14px;border:1px dashed var(--line);background:#0d0d15 center/cover no-repeat;
+    display:grid;place-items:center;text-align:center;color:var(--ink-mute);font-size:.85rem;padding:14px;overflow:hidden}
+  .shot img{width:100%;height:100%;object-fit:cover;border-radius:13px}
+  .featimg{width:100%;border:1px solid var(--line);border-radius:16px;display:block;background:#0a0e16}
+  .hero-media{margin-top:28px}
+  .hero-media img{width:100%;border:1px solid var(--line);border-radius:18px;display:block;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .hero-media .cap{margin-top:8px;font-size:.82rem;color:var(--ink-mute);text-align:center}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:820px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  .gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .gallery img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+  .gallery figcaption{padding:11px 13px;font-size:.92rem;color:var(--ink-soft);font-weight:600}
+  .gallery .slot{display:grid;place-items:center;aspect-ratio:1/1;border:1px dashed var(--line);border-radius:16px;color:var(--ink-mute);font-size:.8rem;text-align:center;padding:12px;line-height:1.5}
+  .lifestyle{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+  @media(max-width:820px){.lifestyle{grid-template-columns:1fr}}
+  .lstyle{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .lstyle img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+  .lstyle .slot{aspect-ratio:4/5;border:1px dashed var(--line);border-radius:16px;display:grid;place-items:center;text-align:center;color:var(--ink-mute);font-size:.82rem;padding:12px;line-height:1.5}
+
+  /* risk box */
+  .risk{border:1px solid rgba(254,44,85,.35);background:rgba(254,44,85,.06);border-radius:var(--radius);padding:22px}
+
+  /* form */
+  form.apply{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:680px){form.apply{grid-template-columns:1fr}}
+  form.apply .full{grid-column:1/-1}
+  .field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px}
+  .field input,.field select{width:100%;background:#0d0d15;border:1px solid var(--line);border-radius:12px;
+    color:var(--ink);padding:12px 14px;font:inherit}
+  .field input:focus,.field select:focus{outline:0;border-color:var(--cyan)}
+
+  /* CTA / QR */
+  .cta{background:linear-gradient(135deg,rgba(37,244,238,.10),rgba(254,44,85,.12));border:1px solid var(--line);
+    border-radius:26px;padding:38px;display:grid;grid-template-columns:1.4fr .9fr;gap:30px;align-items:center}
+  @media(max-width:780px){.cta{grid-template-columns:1fr;text-align:center}}
+  .qr-card{background:#fff;border-radius:18px;padding:16px;display:grid;place-items:center;gap:8px;justify-self:center;width:220px}
+  .qr-card .cap{color:#0a0a0f;font-weight:700;font-size:.82rem;text-align:center}
+  .contact-line{font-size:1.05rem;color:var(--ink);font-weight:600;margin-top:8px}
+
+  .fab{position:fixed;right:18px;bottom:18px;z-index:60;display:inline-flex;align-items:center;gap:10px;
+    background:var(--green);color:#06310f;font-weight:800;padding:13px 19px;border-radius:999px;text-decoration:none;
+    box-shadow:0 12px 30px rgba(37,211,102,.45)}
+  .fab svg{width:21px;height:21px}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--ink-mute);font-size:.88rem}
+
+  /* ===== PRINT: one-page bilingual flyer ===== */
+  .flyer{display:none}
+  @media print{
+    @page{size:Letter portrait;margin:11mm}
+    body{background:#fff !important;color:#000}
+    .no-print{display:none !important}
+    .flyer{display:block;color:#000;font-size:10.5pt;line-height:1.4}
+    .flyer-head{display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #fe2c55;padding-bottom:9px;margin-bottom:12px}
+    .flyer-logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:16pt}
+    .flyer-logo .lg{width:36px;height:36px;border-radius:9px;background:linear-gradient(105deg,#25f4ee,#fe2c55);color:#fff;display:grid;place-items:center;font-size:18pt}
+    .flyer h1{font-size:21pt;margin:0 0 4px;color:#000;line-height:1.1}
+    .flyer .sub{font-size:11pt;color:#333;margin:0 0 6px}
+    .flyer .proofbar{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 12px;font-weight:700;color:#fe2c55;font-size:10pt}
+    .flyer-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:10px}
+    .flyer-cols h2{font-size:11pt;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #ddd;padding-bottom:3px;margin:0 0 6px;color:#fe2c55}
+    .flyer-cols ul{margin:0 0 8px;padding-left:16px}
+    .flyer-cols li{margin-bottom:3px}
+    .flyer-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:3px solid #25f4ee;padding-top:12px;margin-top:4px}
+    .flyer-contact .big{font-size:16pt;font-weight:900}
+    .flyer-qr-wrap{text-align:center}
+    .flyer-qr-wrap #flyer-qr img,.flyer-qr-wrap #flyer-qr canvas{width:140px;height:140px}
+    .flyer-qr-wrap .cap{font-size:8.5pt;color:#333;margin-top:3px}
+  }
+</style>
+</head>
+<body>
+
+<div class="no-print">
+<header>
+  <div class="wrap bar">
+    <div class="brand"><span class="logo">T</span> Socios TikTok Shop México</div>
+    <div class="bar-actions">
+      <div class="toggle" role="group" aria-label="idioma">
+        <button id="lang-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="lang-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a class="btn btn-wa btn-sm" id="wa-top" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO (shared shell, bilingual text) ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">🇲🇽 <span class="lang-es">TikTok Shop está explotando en México</span><span class="lang-en">TikTok Shop is booming in Mexico</span></span>
+
+    <div class="lang-es">
+      <h1>Lanza tu propia tienda en <span class="grad-text">TikTok Shop México</span></h1>
+      <p class="sub">Asóciate con un equipo internacional de e-commerce que ya está generando ventas.</p>
+      <p class="lead big-lead">Crea una nueva fuente de ingresos mientras aprendes cómo funciona el comercio en TikTok. Tú eres dueño de la tienda; nuestro equipo la opera, fabrica y envía.</p>
+    </div>
+    <div class="lang-en">
+      <h1>Launch your own store on <span class="grad-text">TikTok Shop Mexico</span></h1>
+      <p class="sub">Partner with an international e-commerce team already generating sales.</p>
+      <p class="lead big-lead">Build a new income stream while learning how TikTok commerce works. You own the store; our team operates, manufactures and ships.</p>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-wa" id="wa-hero" href="#" target="_blank" rel="noopener">
+        <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
+        <span class="lang-es">Hablar por WhatsApp</span><span class="lang-en">Chat on WhatsApp</span>
+      </a>
+      <a class="btn btn-primary" href="#aplicar"><span class="lang-es">Aplicar ahora</span><span class="lang-en">Apply now</span></a>
+      <a class="btn btn-ghost" href="#como"><span class="lang-es">Cómo funciona</span><span class="lang-en">How it works</span></a>
+    </div>
+
+    <div class="notbox">
+      <span class="lang-es"><strong>Esto no es un curso.</strong> No es una oportunidad de negocio basada en teoría. Es una sociedad activa con un equipo que <strong>ya está operando tiendas de TikTok Shop México y surtiendo pedidos todos los días.</strong></span>
+      <span class="lang-en"><strong>This is not a training course.</strong> It is not a business opportunity based on theory. It is an active partnership with a team that is <strong>already operating TikTok Shop Mexico stores and fulfilling orders every day.</strong></span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">50–100+</div><div class="l"><span class="lang-es">pedidos por día</span><span class="lang-en">orders per day</span></div></div>
+      <div class="stat"><div class="n">75k–105k+</div><div class="l"><span class="lang-es">MXN en ventas / mes</span><span class="lang-en">MXN in sales / month</span></div></div>
+      <div class="stat"><div class="n">$4k–6k+</div><div class="l"><span class="lang-es">USD brutos / mes</span><span class="lang-en">USD gross / month</span></div></div>
+      <div class="stat"><div class="n">100+</div><div class="l"><span class="lang-es">pedidos en un solo día</span><span class="lang-en">orders in a single day</span></div></div>
+    </div>
+
+    <div class="hero-media">
+      <img src="img/analytics-dashboard.svg" alt="Panel de ventas en vivo — TikTok Shop México" />
+      <div class="cap"><span class="lang-es">Nuestro panel en vivo — ventas reales de nuestras tiendas en TikTok Shop México.</span><span class="lang-en">Our live dashboard — real sales from our TikTok Shop Mexico stores.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REAL SALES / PROOF ===================== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">Ventas reales · Pedidos reales</span><span class="lang-en">Real sales · Real orders</span></div>
+      <div class="lang-es"><h2>Esto ya está funcionando</h2><p class="big-lead">Nuestras tiendas actuales ya están generando ventas reales, pedidos reales y crecimiento real.</p></div>
+      <div class="lang-en"><h2>This is already working</h2><p class="big-lead">Our existing stores are already producing real sales, real orders, and real growth.</p></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <ul class="check">
+          <li class="lang-es">50–100+ pedidos por día</li><li class="lang-en">50–100+ orders per day</li>
+          <li class="lang-es">75,000–105,000+ MXN en ventas mensuales</li><li class="lang-en">75,000–105,000+ MXN in monthly sales</li>
+          <li class="lang-es">Aprox. $4,000–$6,000+ USD en ventas brutas mensuales</li><li class="lang-en">Approx. $4,000–$6,000+ USD in monthly gross sales</li>
+          <li class="lang-es">Múltiples tiendas ya aprobadas y operando</li><li class="lang-en">Multiple stores already approved and operating</li>
+          <li class="lang-es">Una tienda socia ya superó 100 pedidos en un día</li><li class="lang-en">A partner store has already passed 100 orders in a single day</li>
+        </ul>
+        <p class="muted" style="margin-top:10px"><span class="lang-es">El crecimiento ha superado nuestras expectativas.</span><span class="lang-en">The growth has exceeded our expectations.</span></p>
+      </div>
+      <div>
+        <img class="featimg" src="img/sales-7day.svg" alt="Resumen de ventas — últimos 6 días" />
+      </div>
+    </div>
+    <div class="proof" style="margin-top:16px">
+      <div class="shot"><img src="img/dashboard-1.png" alt="" onerror="this.replaceWith(document.createTextNode('Captura del panel real / Real dashboard screenshot'))"></div>
+      <div class="shot"><img src="img/dashboard-2.png" alt="" onerror="this.replaceWith(document.createTextNode('Captura del panel real / Real dashboard screenshot'))"></div>
+      <div class="shot"><img src="img/dashboard-3.png" alt="" onerror="this.replaceWith(document.createTextNode('Captura del panel real / Real dashboard screenshot'))"></div>
+    </div>
+    <p class="muted" style="margin-top:10px;font-size:.85rem"><span class="lang-es">↑ Reemplaza estos espacios con tus capturas reales (img/dashboard-1…3.png).</span><span class="lang-en">↑ Replace these slots with your real screenshots (img/dashboard-1…3.png).</span></p>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT GALLERY ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">Productos que ya venden</span><span class="lang-en">Products already selling</span></div>
+      <div class="lang-es"><h2>Playeras que ya se venden todos los días</h2><p>Productos reales de nuestras tiendas. Agregamos diseños nuevos constantemente — como playeras "I ❤️ México" para hombre y mujer.</p></div>
+      <div class="lang-en"><h2>Tees that already sell every day</h2><p>Real products from our stores. We add new designs constantly — like "I ❤️ Mexico" tees for men and women.</p></div>
+    </div>
+    <div class="gallery">
+      <figure><img src="img/product-1.png" onerror="this.onerror=null;this.src='img/camiseta-1.svg'" alt="Camiseta de fútbol"><figcaption>Camiseta de Fútbol</figcaption></figure>
+      <figure><img src="img/product-2.png" onerror="this.onerror=null;this.src='img/camiseta-2.svg'" alt="Camiseta México"><figcaption><span class="lang-es">Camiseta México</span><span class="lang-en">Mexico tee</span></figcaption></figure>
+      <figure><img src="img/product-3.png" onerror="this.onerror=null;this.src='img/camiseta-3.svg'" alt="Camiseta gráfica"><figcaption><span class="lang-es">Camiseta gráfica</span><span class="lang-en">Graphic tee</span></figcaption></figure>
+      <figure><img src="img/product-4.png" onerror="this.onerror=null;this.src='img/camiseta-4.svg'" alt="I love México"><figcaption><span class="lang-es">Camiseta "I ❤️ México"</span><span class="lang-en">"I ❤️ Mexico" tee</span></figcaption></figure>
+      <figure><div class="slot"><span class="lang-es">+ Más productos<br>img/product-5.png</span><span class="lang-en">+ More products<br>img/product-5.png</span></div></figure>
+      <figure><div class="slot"><span class="lang-es">+ Más productos<br>img/product-6.png</span><span class="lang-en">+ More products<br>img/product-6.png</span></div></figure>
+    </div>
+    <p class="muted" style="margin-top:12px;font-size:.85rem"><span class="lang-es">Para fotos reales: guarda las imágenes de tus listados de TikTok en <b>img/</b> como product-1.png, product-2.png… y aparecen solas.</span><span class="lang-en">For real photos: save your TikTok listing images into <b>img/</b> as product-1.png, product-2.png… and they appear automatically.</span></p>
+
+    <div class="section-head" style="margin-top:34px;margin-bottom:14px">
+      <div class="lang-es"><h3 style="font-size:1.25rem">Gente real usándolas</h3><p style="margin:0">Fotos de hombres y mujeres en México con las playeras. (Tómalas allá o usa las de tus listados.)</p></div>
+      <div class="lang-en"><h3 style="font-size:1.25rem">Real people wearing them</h3><p style="margin:0">Photos of men and women in Mexico in the tees. (Shoot them there or use your listing photos.)</p></div>
+    </div>
+    <div class="lifestyle">
+      <figure class="lstyle"><img src="img/modelo-1.jpg" onerror="this.parentNode.innerHTML='&lt;div class=\'slot\'&gt;Foto / Photo<br>img/modelo-1.jpg&lt;/div&gt;'" alt=""></figure>
+      <figure class="lstyle"><img src="img/modelo-2.jpg" onerror="this.parentNode.innerHTML='&lt;div class=\'slot\'&gt;Foto / Photo<br>img/modelo-2.jpg&lt;/div&gt;'" alt=""></figure>
+      <figure class="lstyle"><img src="img/modelo-3.jpg" onerror="this.parentNode.innerHTML='&lt;div class=\'slot\'&gt;Foto / Photo<br>img/modelo-3.jpg&lt;/div&gt;'" alt=""></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY TIKTOK SHOP MX ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">La oportunidad</span><span class="lang-en">The opportunity</span></div>
+      <div class="lang-es"><h2>Por qué nos entusiasma TikTok Shop México</h2></div>
+      <div class="lang-en"><h2>Why we're excited about TikTok Shop Mexico</h2></div>
+    </div>
+    <div class="lang-es">
+      <p class="big-lead">TikTok se está convirtiendo rápidamente en una de las plataformas de comercio electrónico más grandes del mundo. Así como Amazon transformó las compras en línea en la última década, TikTok Shop está cambiando la forma en que se descubren y compran los productos.</p>
+      <p><strong>México apenas está en las etapas iniciales de adopción de TikTok Shop.</strong> Quienes empiezan ahora tienen la oportunidad de construir historial de tienda, reseñas e impulso <em>antes</em> de que la plataforma se sature. Creemos que esto representa una oportunidad única para los participantes tempranos.</p>
+    </div>
+    <div class="lang-en">
+      <p class="big-lead">TikTok is rapidly becoming one of the largest e-commerce platforms in the world. Just as Amazon transformed online shopping over the last decade, TikTok Shop is changing how products are discovered and purchased.</p>
+      <p><strong>Mexico is still in the early stages of TikTok Shop adoption.</strong> People who get started now have the opportunity to build store history, reviews, and momentum <em>before</em> the platform becomes crowded. We believe this is a unique opportunity for early participants.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHO IS BEHIND ===================== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">El equipo</span><span class="lang-en">The team</span></div>
+      <div class="lang-es"><h2>¿Quién está detrás de esto?</h2><p>Esta sociedad combina tres grupos. Juntos creamos un sistema completo.</p></div>
+      <div class="lang-en"><h2>Who is behind this?</h2><p>This partnership combines three groups. Together we create a complete system.</p></div>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">🇲🇽</div>
+        <div class="lang-es"><h3>Socios en México</h3><p>Dueños de tienda que abren y poseen las cuentas de TikTok Shop México.</p></div>
+        <div class="lang-en"><h3>Mexico Partners</h3><p>Store owners who open and own the TikTok Shop Mexico accounts.</p></div>
+      </div>
+      <div class="card"><div class="ico">🇨🇳</div>
+        <div class="lang-es"><h3>Equipo de e-commerce en China</h3><p>Operadores experimentados de TikTok que gestionan productos, listados, estrategias de crecimiento y optimización.</p></div>
+        <div class="lang-en"><h3>China E-Commerce Team</h3><p>Experienced TikTok operators who manage products, listings, growth strategy and store optimization.</p></div>
+      </div>
+      <div class="card"><div class="ico">🏭</div>
+        <div class="lang-es"><h3>Manufactura y surtido</h3><p>Operación profesional de producción y envío capaz de fabricar y enviar rápido para cumplir los plazos de TikTok.</p></div>
+        <div class="lang-en"><h3>Manufacturing & Fulfillment</h3><p>A professional production and fulfillment operation able to make and ship fast to meet TikTok's delivery requirements.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== YOU PROVIDE / WE HANDLE ===================== -->
+<section>
+  <div class="wrap">
+    <div class="two-col">
+      <div class="card">
+        <div class="ico">🙋</div>
+        <div class="lang-es"><h3>Lo que tú aportas</h3>
+          <p class="muted">No necesitas experiencia en e-commerce. No necesitas inventario. No necesitas entender la publicidad de TikTok.</p>
+          <ul class="check">
+            <li>Identificación mexicana válida</li>
+            <li>Cuenta de TikTok</li>
+            <li>Poder completar la verificación de TikTok</li>
+            <li>Cuenta de WeChat (app gratuita para hablar con el equipo en China)</li>
+            <li>Disposición para aprender</li>
+          </ul>
+        </div>
+        <div class="lang-en"><h3>What you provide</h3>
+          <p class="muted">No e-commerce experience needed. No inventory needed. No need to understand TikTok ads.</p>
+          <ul class="check">
+            <li>Valid Mexican ID</li>
+            <li>TikTok account</li>
+            <li>Ability to complete TikTok verification</li>
+            <li>WeChat account (free app to talk with our China team)</li>
+            <li>Willingness to learn</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ico">⚙️</div>
+        <div class="lang-es"><h3>Lo que nuestro equipo maneja</h3>
+          <ul class="check">
+            <li><b>Investigación de productos</b> — encontrar lo que ya se vende</li>
+            <li><b>Gestión de la tienda</b> — listados, optimización y crecimiento</li>
+            <li><b>Manufactura</b> — producir rápido y eficiente</li>
+            <li><b>Surtido</b> — enviar según los requisitos de TikTok</li>
+            <li><b>Atención al cliente</b> — soporte y temas operativos</li>
+            <li><b>Coordinación internacional</b> — México ⇄ China</li>
+          </ul>
+        </div>
+        <div class="lang-en"><h3>What our team handles</h3>
+          <ul class="check">
+            <li><b>Product research</b> — finding what already sells</li>
+            <li><b>Store management</b> — listings, optimization, growth</li>
+            <li><b>Manufacturing</b> — fast, efficient production</li>
+            <li><b>Fulfillment</b> — shipping per TikTok's requirements</li>
+            <li><b>Customer service</b> — support and operations</li>
+            <li><b>International coordination</b> — Mexico ⇄ China</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEARN WHILE YOU EARN ===================== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">Aprende mientras ganas</span><span class="lang-en">Learn while you earn</span></div>
+      <div class="lang-es"><h2>Ve por dentro un negocio internacional de e-commerce</h2><p>Tendrás visibilidad de tu tienda y podrás aprender cómo opera todo el sistema.</p></div>
+      <div class="lang-en"><h2>See an international e-commerce business from the inside</h2><p>You'll have visibility into your store and learn how the whole system operates.</p></div>
+    </div>
+    <div class="pill-row lang-es">
+      <span class="pill">Selección de productos</span><span class="pill">Gestión de tienda</span><span class="pill">Operación de TikTok Shop</span>
+      <span class="pill">Flujos de manufactura</span><span class="pill">Atención al cliente</span><span class="pill">E-commerce internacional</span>
+    </div>
+    <div class="pill-row lang-en">
+      <span class="pill">Product selection</span><span class="pill">Store management</span><span class="pill">TikTok Shop operations</span>
+      <span class="pill">Manufacturing workflows</span><span class="pill">Customer service</span><span class="pill">International e-commerce</span>
+    </div>
+    <p style="margin-top:18px" class="lang-es">Con el tiempo, podrás operar tiendas adicionales para familiares o construir tu propio negocio con el conocimiento que adquieras.</p>
+    <p style="margin-top:18px" class="lang-en">Over time, you may operate additional stores for family members or build your own business using the knowledge you gain.</p>
+  </div>
+</section>
+
+<!-- ===================== GROWTH STRATEGY + MANUFACTURING ===================== -->
+<section>
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="kicker"><span class="lang-es">Estrategia de crecimiento</span><span class="lang-en">Growth strategy</span></div>
+        <div class="lang-es">
+          <h2 style="font-size:1.5rem">Volumen, no una sola playera</h2>
+          <p>Muchos se enfocan en la ganancia de una sola playera. Nosotros nos enfocamos en el volumen. TikTok Shop premia a las tiendas que:</p>
+          <ul class="check"><li>ofrecen precios competitivos</li><li>generan pedidos</li><li>acumulan reseñas</li><li>construyen confianza</li><li>aumentan la velocidad de ventas</li></ul>
+          <p>Hacemos crecer las tiendas rápido y establecemos cuentas de vendedor sólidas. A medida que maduran, introducimos productos con mayor potencial de ganancia. <strong>La meta es construir tiendas capaces de vender cientos de productos por día.</strong></p>
+        </div>
+        <div class="lang-en">
+          <h2 style="font-size:1.5rem">Volume, not a single shirt</h2>
+          <p>Many people focus on profit from a single shirt. We focus on volume. TikTok Shop rewards stores that:</p>
+          <ul class="check"><li>offer competitive pricing</li><li>generate orders</li><li>collect reviews</li><li>build trust</li><li>increase sales velocity</li></ul>
+          <p>We grow stores quickly and establish strong seller accounts. As they mature, we add products with higher profit potential. <strong>The goal is to build stores that can sell hundreds of products per day.</strong></p>
+        </div>
+      </div>
+      <div>
+        <div class="kicker"><span class="lang-es">Por qué la manufactura importa</span><span class="lang-en">Why manufacturing matters</span></div>
+        <img class="featimg" style="margin-bottom:16px" src="img/fabrica.svg" alt="Manufactura y envío rápido" />
+        <div class="lang-es">
+          <h2 style="font-size:1.5rem">Envíos rápidos = ventaja real</h2>
+          <p>Uno de los mayores retos en TikTok Shop México es el surtido. TikTok exige envíos rápidos, y muchos vendedores batallan porque no pueden fabricar a tiempo.</p>
+          <p>Nuestros socios de manufactura tienen <strong>más de 15 años de experiencia</strong> produciendo y enviando de forma eficiente. Esta infraestructura le da a nuestras tiendas una ventaja significativa.</p>
+        </div>
+        <div class="lang-en">
+          <h2 style="font-size:1.5rem">Fast shipping = a real edge</h2>
+          <p>One of the biggest challenges on TikTok Shop Mexico is fulfillment. TikTok requires fast shipping, and many sellers struggle because they can't manufacture in time.</p>
+          <p>Our manufacturing partners have <strong>more than 15 years of experience</strong> producing and shipping efficiently. This infrastructure gives our stores a significant advantage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPECTATIONS ===================== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">Expectativas importantes</span><span class="lang-en">Important expectations</span></div>
+      <div class="lang-es"><h2>Esto es una sociedad</h2><p>Para maximizar el crecimiento, nuestro equipo manejará las operaciones diarias de la tienda. Podrás ver y aprender del proceso. Te pedimos <strong>no hacer cambios sin antes coordinar con el equipo</strong> en:</p></div>
+      <div class="lang-en"><h2>This is a partnership</h2><p>To maximize growth, our team handles day-to-day store operations. You can view and learn from the process. We ask that you <strong>don't make changes without first coordinating with the team</strong> to:</p></div>
+    </div>
+    <div class="pill-row lang-es">
+      <span class="pill">Listados de productos</span><span class="pill">Precios</span><span class="pill">Configuración de envíos</span><span class="pill">Configuración de la tienda</span><span class="pill">Configuración de publicidad</span>
+    </div>
+    <div class="pill-row lang-en">
+      <span class="pill">Product listings</span><span class="pill">Pricing</span><span class="pill">Shipping settings</span><span class="pill">Store configuration</span><span class="pill">Advertising settings</span>
+    </div>
+    <p style="margin-top:16px" class="muted lang-es">La consistencia es importante mientras las tiendas están creciendo.</p>
+    <p style="margin-top:16px" class="muted lang-en">Consistency is important while stores are growing.</p>
+  </div>
+</section>
+
+<!-- ===================== RISKS + WHY NOW + STEPS ===================== -->
+<section id="como">
+  <div class="wrap">
+    <div class="two-col" style="align-items:start">
+      <div class="risk">
+        <div class="kicker"><span class="lang-es">Riesgos y transparencia</span><span class="lang-en">Risks & transparency</span></div>
+        <div class="lang-es"><h3>Esto es un negocio real</h3><p class="muted">Ningún negocio está libre de riesgo. Es importante entender:</p>
+          <ul class="dot"><li>Las ventas no están garantizadas</li><li>Las políticas de la plataforma pueden cambiar</li><li>Pueden ocurrir problemas de envío</li><li>Ocasionalmente hay disputas con clientes</li><li>Las tendencias de productos cambian con el tiempo</li></ul>
+          <p>Nuestro equipo trabaja en conjunto para manejar estos retos y mejorar continuamente.</p>
+        </div>
+        <div class="lang-en"><h3>This is real business</h3><p class="muted">No business is risk-free. It's important to understand:</p>
+          <ul class="dot"><li>Sales are not guaranteed</li><li>Platform policies can change</li><li>Shipping issues can occur</li><li>Customer disputes occasionally happen</li><li>Product trends change over time</li></ul>
+          <p>Our team works together to manage these challenges and continuously improve.</p>
+        </div>
+      </div>
+      <div>
+        <div class="kicker"><span class="lang-es">¿Por qué unirte ahora?</span><span class="lang-en">Why join now?</span></div>
+        <div class="lang-es"><h3>Los que llegan temprano ganan posición</h3><p>Las tiendas que se establecen temprano suelen tener más reseñas, mayor confianza, más historial de ventas y mejor posicionamiento. Buscamos sumar <strong>al menos 10 nuevas tiendas socias de inmediato</strong>, y nuestros sistemas soportan muchas más.</p></div>
+        <div class="lang-en"><h3>Early movers gain position</h3><p>Stores that establish early often get more reviews, greater trust, more sales history and stronger positioning. We're looking to add <strong>at least 10 new partner stores immediately</strong>, and our systems support many more.</p></div>
+
+        <div class="kicker" style="margin-top:18px"><span class="lang-es">Cómo empezar</span><span class="lang-en">How to get started</span></div>
+        <div class="steps">
+          <div class="step"><b class="lang-es">Aplica</b><b class="lang-en">Apply</b><span class="lang-es">Aplica para ser socio.</span><span class="lang-en">Apply to become a partner.</span></div>
+          <div class="step"><b class="lang-es">Verifica TikTok</b><b class="lang-en">Verify TikTok</b><span class="lang-es">Completa la verificación de TikTok Shop.</span><span class="lang-en">Complete TikTok Shop verification.</span></div>
+          <div class="step"><b class="lang-es">Descarga WeChat</b><b class="lang-en">Download WeChat</b><span class="lang-es">Instala WeChat.</span><span class="lang-en">Install WeChat.</span></div>
+          <div class="step"><b class="lang-es">Únete al grupo</b><b class="lang-en">Join the group</b><span class="lang-es">Entra al grupo de bienvenida para socios.</span><span class="lang-en">Join the partner onboarding group.</span></div>
+          <div class="step"><b class="lang-es">Conecta con el equipo</b><b class="lang-en">Connect with the team</b><span class="lang-es">Conéctate con el equipo de gestión.</span><span class="lang-en">Connect with the management team.</span></div>
+          <div class="step"><b class="lang-es">Lanza tu tienda</b><b class="lang-en">Launch your store</b><span class="lang-es">Abre y arranca tu tienda.</span><span class="lang-en">Open and start your store.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPLICATION FORM ===================== -->
+<section id="aplicar" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span class="lang-es">Aplica hoy</span><span class="lang-en">Apply today</span></div>
+      <div class="lang-es"><h2>Aplica para ser socio</h2><p>Llena el formulario y se abrirá WhatsApp con tu información lista para enviar. Contactamos a los solicitantes calificados con los siguientes pasos.</p></div>
+      <div class="lang-en"><h2>Apply to become a partner</h2><p>Fill this out and WhatsApp will open with your info ready to send. We contact qualified applicants with next steps.</p></div>
+    </div>
+
+    <form class="apply" id="applyForm" onsubmit="return submitApply(event)">
+      <div class="field"><label>Nombre / Name</label><input name="name" required></div>
+      <div class="field"><label>Teléfono / Phone</label><input name="phone" required></div>
+      <div class="field"><label>Email</label><input name="email" type="email"></div>
+      <div class="field"><label>Ciudad / City</label><input name="city"></div>
+      <div class="field"><label>Usuario de TikTok / TikTok username</label><input name="tiktok"></div>
+      <div class="field"><label>¿Tienes un negocio? / Do you own a business?</label>
+        <select name="business"><option value="">—</option><option>Sí / Yes</option><option>No</option></select></div>
+      <div class="field"><label>¿Tienes ID mexicana válida? / Valid Mexican ID?</label>
+        <select name="id"><option value="">—</option><option>Sí / Yes</option><option>No</option></select></div>
+      <div class="field"><label>¿Tienes WeChat instalado? / WeChat installed?</label>
+        <select name="wechat"><option value="">—</option><option>Sí / Yes</option><option>No</option></select></div>
+      <div class="full" style="margin-top:6px">
+        <button class="btn btn-wa" type="submit" style="width:100%;justify-content:center">
+          <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
+          <span class="lang-es">Enviar por WhatsApp</span><span class="lang-en">Send via WhatsApp</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== CTA / QR ===================== -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <div class="kicker" style="color:var(--cyan)"><span class="lang-es">Empieza hoy</span><span class="lang-en">Start today</span></div>
+        <div class="lang-es"><h2>¿Listo para lanzar tu tienda?</h2><p>Escríbenos por WhatsApp o escanea el código. Te respondemos rápido y te ayudamos a arrancar.</p></div>
+        <div class="lang-en"><h2>Ready to launch your store?</h2><p>Message us on WhatsApp or scan the code. We reply fast and help you get started.</p></div>
+        <div class="hero-cta" style="margin-top:6px">
+          <a class="btn btn-wa" id="wa-cta" href="#" target="_blank" rel="noopener">
+            <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
+            <span class="lang-es">Hablar por WhatsApp</span><span class="lang-en">Chat on WhatsApp</span>
+          </a>
+        </div>
+        <p class="contact-line"><span class="lang-es">Contacto:</span><span class="lang-en">Contact:</span> <strong id="contact-name">Bernardo</strong> · <span id="contact-phone">+52 …</span></p>
+      </div>
+      <div class="qr-card">
+        <div id="qrcode"></div>
+        <div class="cap"><span class="lang-es">Escanea para más info</span><span class="lang-en">Scan for more info</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="lang-es">© 2026 Socios TikTok Shop México · No afiliado oficialmente a TikTok. TikTok es marca de sus respectivos dueños. Las ventas no están garantizadas.</span>
+    <span class="lang-en">© 2026 TikTok Shop Mexico Partners · Not officially affiliated with TikTok. TikTok is a trademark of its respective owners. Sales are not guaranteed.</span>
+  </div>
+</footer>
+
+<a class="fab" id="wa-fab" href="#" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
+  WhatsApp
+</a>
+</div><!-- /no-print -->
+
+
+<!-- ===================== PRINT ONE-SHEET (ES + EN) ===================== -->
+<div class="flyer">
+  <div class="flyer-head">
+    <div class="flyer-logo"><span class="lg">T</span> Socios TikTok Shop México</div>
+    <div style="text-align:right;font-size:8.5pt;color:#555">🇲🇽 TikTok Shop México · 2026</div>
+  </div>
+  <h1>Lanza tu propia tienda en TikTok Shop México</h1>
+  <p class="sub"><em>Launch your own store on TikTok Shop Mexico — partner with a team already selling.</em></p>
+  <div class="proofbar">
+    <span>✓ 50–100+ pedidos/día</span><span>✓ 75k–105k+ MXN/mes</span><span>✓ $4k–6k+ USD/mes</span><span>✓ Tiendas ya operando</span>
+  </div>
+  <div class="flyer-cols">
+    <div>
+      <h2>Español</h2>
+      <p style="margin:0 0 6px"><strong>Tú eres dueño de la tienda. Nuestro equipo internacional la opera, fabrica y envía.</strong></p>
+      <p style="margin:0 0 6px"><u>Tú aportas:</u> ID mexicana · cuenta de TikTok · WeChat · ganas de aprender.</p>
+      <p style="margin:0 0 6px"><u>Nosotros manejamos:</u> productos, listados, manufactura, envíos y atención al cliente.</p>
+      <ul>
+        <li>Sin inventario ni experiencia previa</li>
+        <li>Aprende cómo opera un e-commerce internacional</li>
+        <li>Entra temprano, antes de que se sature</li>
+      </ul>
+    </div>
+    <div>
+      <h2>English</h2>
+      <p style="margin:0 0 6px"><strong>You own the store. Our international team operates, manufactures and ships it.</strong></p>
+      <p style="margin:0 0 6px"><u>You bring:</u> Mexican ID · TikTok account · WeChat · willingness to learn.</p>
+      <p style="margin:0 0 6px"><u>We handle:</u> products, listings, manufacturing, shipping and customer service.</p>
+      <ul>
+        <li>No inventory, no experience needed</li>
+        <li>Learn how international e-commerce works</li>
+        <li>Get in early, before it gets crowded</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flyer-foot">
+    <div class="flyer-contact">
+      <div style="margin-bottom:5px">📲 <strong>WhatsApp:</strong></div>
+      <div class="big" id="flyer-phone">+52 …</div>
+      <div style="margin-top:3px" id="flyer-name">Bernardo</div>
+      <div style="margin-top:7px;font-size:9.5pt;color:#444">Escanea para aplicar → / Scan to apply →</div>
+    </div>
+    <div class="flyer-qr-wrap">
+      <div id="flyer-qr"></div>
+      <div class="cap">Más info / More info</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   👉 CONFIG — EDITA SOLO ESTAS LÍNEAS (replace these values)
+   ============================================================ */
+const CONFIG = {
+  contactName:     "Bernardo",
+  whatsappNumber:  "5215555555555",            // ⚠️ código país + número, SIN + ni espacios. MX = 52 + 10 dígitos
+  phoneDisplay:    "+52 1 55 5555 5555",       // ⚠️ cómo se muestra
+  whatsappMessage: "Hola, vi la página de Socios TikTok Shop México y quiero información para aplicar.",
+  siteUrl:         "https://btownone.github.io/tiktok-shop-mexico/" // URL pública (GitHub Pages) → es lo que abre el QR
+};
+/* ============================================================ */
+
+const waHref = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(CONFIG.whatsappMessage);
+["wa-top","wa-hero","wa-cta","wa-fab"].forEach(function(id){var e=document.getElementById(id); if(e) e.href=waHref;});
+function setText(id,v){var e=document.getElementById(id); if(e) e.textContent=v;}
+setText("contact-name",CONFIG.contactName); setText("contact-phone",CONFIG.phoneDisplay);
+setText("flyer-name",CONFIG.contactName); setText("flyer-phone",CONFIG.phoneDisplay);
+
+function makeQR(id,size){
+  var el=document.getElementById(id); if(!el) return; el.innerHTML="";
+  if(window.QRCode){ new QRCode(el,{text:CONFIG.siteUrl,width:size,height:size,correctLevel:QRCode.CorrectLevel.M}); }
+  else{ var i=document.createElement("img"); i.src="https://api.qrserver.com/v1/create-qr-code/?size="+size+"x"+size+"&data="+encodeURIComponent(CONFIG.siteUrl); i.width=size; i.height=size; el.appendChild(i); }
+}
+makeQR("qrcode",170); makeQR("flyer-qr",150);
+
+/* Application form -> opens WhatsApp pre-filled */
+function submitApply(e){
+  e.preventDefault();
+  var f=e.target, g=function(n){return (f.elements[n]&&f.elements[n].value||"").trim();};
+  var lines=[
+    "*Nueva solicitud / New application — TikTok Shop México*","",
+    "Nombre / Name: "+g("name"),
+    "Teléfono / Phone: "+g("phone"),
+    "Email: "+g("email"),
+    "Ciudad / City: "+g("city"),
+    "TikTok: "+g("tiktok"),
+    "¿Negocio? / Business: "+g("business"),
+    "¿ID mexicana? / Mexican ID: "+g("id"),
+    "¿WeChat? : "+g("wechat")
+  ];
+  var url="https://wa.me/"+CONFIG.whatsappNumber+"?text="+encodeURIComponent(lines.join("\n"));
+  window.open(url,"_blank","noopener");
+  return false;
+}
+
+/* Language */
+function setLang(lang){
+  document.documentElement.lang=lang;
+  document.body.classList.toggle("en",lang==="en");
+  document.getElementById("lang-es").classList.toggle("active",lang==="es");
+  document.getElementById("lang-en").classList.toggle("active",lang==="en");
+  try{localStorage.setItem("ttshop_lang",lang);}catch(e){}
+}
+var saved="es"; try{saved=localStorage.getItem("ttshop_lang")||"es";}catch(e){}
+setLang(saved);
+</script>
+</body>
+</html>
