@@ -163,6 +163,7 @@
     background:var(--green);color:#06310f;font-weight:800;padding:13px 19px;border-radius:999px;text-decoration:none;
     box-shadow:0 12px 30px rgba(37,211,102,.45)}
   .fab svg{width:21px;height:21px}
+  .fab-apply{left:18px;right:auto;background:var(--grad);color:#0a0a0f;box-shadow:0 12px 30px rgba(254,44,85,.42)}
   footer{border-top:1px solid var(--line);padding:28px 0;color:var(--ink-mute);font-size:.88rem}
 
   /* ===== PRINT: one-page bilingual flyer ===== */
@@ -526,29 +527,25 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker"><span class="lang-es">Aplica hoy</span><span class="lang-en">Apply today</span></div>
-      <div class="lang-es"><h2>Aplica para ser socio</h2><p>Llena el formulario y se abrirá WhatsApp con tu información lista para enviar. Contactamos a los solicitantes calificados con los siguientes pasos.</p></div>
-      <div class="lang-en"><h2>Apply to become a partner</h2><p>Fill this out and WhatsApp will open with your info ready to send. We contact qualified applicants with next steps.</p></div>
+      <div class="lang-es"><h2>Aplica para ser socio</h2><p>Déjanos tus datos y te contactamos con los siguientes pasos. Toma 30 segundos.</p></div>
+      <div class="lang-en"><h2>Apply to become a partner</h2><p>Leave your details and we'll reach out with next steps. Takes 30 seconds.</p></div>
     </div>
 
     <form class="apply" id="applyForm" onsubmit="return submitApply(event)">
-      <div class="field"><label>Nombre / Name</label><input name="name" required></div>
-      <div class="field"><label>Teléfono / Phone</label><input name="phone" required></div>
-      <div class="field"><label>Email</label><input name="email" type="email"></div>
-      <div class="field"><label>Ciudad / City</label><input name="city"></div>
-      <div class="field"><label>Usuario de TikTok / TikTok username</label><input name="tiktok"></div>
-      <div class="field"><label>¿Tienes un negocio? / Do you own a business?</label>
-        <select name="business"><option value="">—</option><option>Sí / Yes</option><option>No</option></select></div>
-      <div class="field"><label>¿Tienes ID mexicana válida? / Valid Mexican ID?</label>
-        <select name="id"><option value="">—</option><option>Sí / Yes</option><option>No</option></select></div>
-      <div class="field"><label>¿Tienes WeChat instalado? / WeChat installed?</label>
-        <select name="wechat"><option value="">—</option><option>Sí / Yes</option><option>No</option></select></div>
+      <div class="field full"><label>Nombre / Name</label><input name="name" required></div>
+      <div class="field"><label>Número de teléfono / Phone number</label><input name="phone" type="tel" required></div>
+      <div class="field"><label>WhatsApp</label><input name="whatsapp" type="tel"></div>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="full" style="margin-top:6px">
-        <button class="btn btn-wa" type="submit" style="width:100%;justify-content:center">
-          <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
-          <span class="lang-es">Enviar por WhatsApp</span><span class="lang-en">Send via WhatsApp</span>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">
+          <span class="lang-es">Enviar solicitud</span><span class="lang-en">Send application</span>
         </button>
       </div>
     </form>
+    <div id="applyOk" class="card" style="display:none;border-color:var(--green);margin-top:14px">
+      <strong class="lang-es">¡Gracias! 🎉 Recibimos tus datos. Te contactamos muy pronto.</strong>
+      <strong class="lang-en">Thank you! 🎉 We got your details. We'll reach out very soon.</strong>
+    </div>
   </div>
 </section>
 
@@ -587,6 +584,7 @@
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
   WhatsApp
 </a>
+<a class="fab fab-apply" href="#aplicar"><span class="lang-es">✏️ Aplica ya</span><span class="lang-en">✏️ Apply now</span></a>
 </div><!-- /no-print -->
 
 
@@ -645,10 +643,11 @@
    ============================================================ */
 const CONFIG = {
   contactName:     "Bernardo",
-  whatsappNumber:  "5215555555555",            // ⚠️ código país + número, SIN + ni espacios. MX = 52 + 10 dígitos
-  phoneDisplay:    "+52 1 55 5555 5555",       // ⚠️ cómo se muestra
+  whatsappNumber:  "12163102050",              // +1 216-310-2050 (Bernardo, temporal)
+  phoneDisplay:    "+1 (216) 310-2050",
+  leadEmail:       "bernardo8605@outlook.com", // las solicitudes del formulario llegan a este correo
   whatsappMessage: "Hola, vi la página de TikTienda y quiero información para aplicar.",
-  siteUrl:         "https://btownone.github.io/tiktok-shop-mexico/" // URL pública (GitHub Pages) → es lo que abre el QR
+  siteUrl:         "https://btownone.github.io/tiktienda/" // URL pública (GitHub Pages) → es lo que abre el QR
 };
 /* ============================================================ */
 
@@ -665,23 +664,29 @@ function makeQR(id,size){
 }
 makeQR("qrcode",170); makeQR("flyer-qr",150);
 
-/* Application form -> opens WhatsApp pre-filled */
-function submitApply(e){
+/* Application form -> emails the lead to CONFIG.leadEmail via FormSubmit (no backend needed).
+   First-ever submission triggers a one-time activation email to that address — click the link once. */
+async function submitApply(e){
   e.preventDefault();
   var f=e.target, g=function(n){return (f.elements[n]&&f.elements[n].value||"").trim();};
-  var lines=[
-    "*Nueva solicitud / New application — TikTienda (TikTok Shop México)*","",
-    "Nombre / Name: "+g("name"),
-    "Teléfono / Phone: "+g("phone"),
-    "Email: "+g("email"),
-    "Ciudad / City: "+g("city"),
-    "TikTok: "+g("tiktok"),
-    "¿Negocio? / Business: "+g("business"),
-    "¿ID mexicana? / Mexican ID: "+g("id"),
-    "¿WeChat? : "+g("wechat")
-  ];
-  var url="https://wa.me/"+CONFIG.whatsappNumber+"?text="+encodeURIComponent(lines.join("\n"));
-  window.open(url,"_blank","noopener");
+  if (f.elements["_honey"] && f.elements["_honey"].value) return false; // bot trap
+  var btn=f.querySelector('button[type="submit"]'); if(btn) btn.disabled=true;
+  var payload={
+    _subject:"Nuevo lead TikTienda 🎉",
+    _template:"table",
+    Nombre:g("name"),
+    Telefono:g("phone"),
+    WhatsApp:g("whatsapp")
+  };
+  try{
+    await fetch("https://formsubmit.co/ajax/"+CONFIG.leadEmail,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify(payload)
+    });
+  }catch(err){ /* network issue — still show thanks */ }
+  f.style.display="none";
+  var ok=document.getElementById("applyOk"); if(ok) ok.style.display="block";
   return false;
 }
 
