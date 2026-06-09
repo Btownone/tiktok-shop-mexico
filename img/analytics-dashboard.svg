@@ -23,8 +23,8 @@
 
   <!-- KPI B -->
   <rect x="360" y="100" width="300" height="150" rx="14" fill="#0e1420" stroke="#1c2433"/>
-  <text x="382" y="135" fill="#8a8a9c" font-size="13" letter-spacing="1">VENTAS HOY (¥)</text>
-  <text x="382" y="200" fill="#f3f4f8" font-size="50" font-weight="800">3,595</text>
+  <text x="382" y="135" fill="#8a8a9c" font-size="13" letter-spacing="1">VENTAS HOY (MXN)</text>
+  <text x="382" y="200" fill="#f3f4f8" font-size="44" font-weight="800">8,988</text>
   <text x="382" y="230" fill="#8a8a9c" font-size="14">GMV del día</text>
 
   <!-- chart -->
@@ -40,14 +40,14 @@
     <text x="62" y="350" font-weight="700">Tienda 01</text>
     <text x="300" y="350" fill="#9aa2b1">TikTok</text>
     <text x="480" y="350">79 pedidos</text>
-    <text x="700" y="350" fill="#25f4ee" font-weight="700">¥3,196</text>
+    <text x="700" y="350" fill="#25f4ee" font-weight="700">$7,990</text>
     <rect x="840" y="338" width="180" height="14" rx="7" fill="#101826"/>
     <rect x="840" y="338" width="180" height="14" rx="7" fill="#25f4ee"/>
 
     <text x="62" y="396" font-weight="700">Tienda 02</text>
     <text x="300" y="396" fill="#9aa2b1">TikTok</text>
     <text x="480" y="396">8 pedidos</text>
-    <text x="700" y="396" fill="#25f4ee" font-weight="700">¥399</text>
+    <text x="700" y="396" fill="#25f4ee" font-weight="700">$998</text>
     <rect x="840" y="384" width="180" height="14" rx="7" fill="#101826"/>
     <rect x="840" y="384" width="24" height="14" rx="7" fill="#fe2c55"/>
   </g>

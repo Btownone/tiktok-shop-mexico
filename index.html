@@ -165,6 +165,19 @@
     box-shadow:0 12px 30px rgba(37,211,102,.45)}
   .fab svg{width:21px;height:21px}
   .fab-apply{left:18px;right:auto;background:var(--grad);color:#0a0a0f;box-shadow:0 12px 30px rgba(254,44,85,.42)}
+  .btn-lg{padding:15px 24px;font-size:1.05rem}
+  .steps-go{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:760px;margin:0 auto}
+  @media(max-width:720px){.steps-go{grid-template-columns:1fr}}
+  .go-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .go-card .go-num{width:48px;height:48px;border-radius:50%;background:var(--grad);color:#0a0a0f;font-weight:900;font-size:22px;display:grid;place-items:center;margin-bottom:4px}
+  .go-card h3{margin:0;font-size:1.25rem}
+  .go-card p{margin:0 0 12px;font-size:.96rem}
+  .go-card .btn{margin-top:auto;width:100%;justify-content:center}
+  .actionbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px;background:rgba(10,10,15,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .actionbar .actionbar-main{flex:1;justify-content:center;padding:15px;font-size:1.02rem}
+  .actionbar .actionbar-wa{flex:0 0 auto;padding:0 18px}
+  .actionbar .actionbar-wa svg{width:23px;height:23px}
+  body{padding-bottom:78px}
   footer{border-top:1px solid var(--line);padding:28px 0;color:var(--ink-mute);font-size:.88rem}
 
   /* ===== PRINT: one-page bilingual flyer ===== */
@@ -226,12 +239,11 @@
     </div>
 
     <div class="hero-cta">
-      <a class="btn btn-wa" id="wa-hero" href="#" target="_blank" rel="noopener">
+      <a class="btn btn-primary btn-lg" href="#empezar"><span class="lang-es">🚀 Abre tu tienda ahora</span><span class="lang-en">🚀 Open your shop now</span></a>
+      <a class="btn btn-wa btn-lg" id="wa-hero" href="#" target="_blank" rel="noopener">
         <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
-        <span class="lang-es">Hablar por WhatsApp</span><span class="lang-en">Chat on WhatsApp</span>
+        <span class="lang-es">Contáctanos por WhatsApp</span><span class="lang-en">Contact us on WhatsApp</span>
       </a>
-      <a class="btn btn-primary" href="#aplicar"><span class="lang-es">Aplicar ahora</span><span class="lang-en">Apply now</span></a>
-      <a class="btn btn-ghost" href="#como"><span class="lang-es">Cómo funciona</span><span class="lang-en">How it works</span></a>
     </div>
 
     <div class="notbox">
@@ -249,6 +261,31 @@
     <div class="hero-media">
       <img src="img/analytics-dashboard.svg" alt="Panel de ventas en vivo — TikTok Shop México" />
       <div class="cap"><span class="lang-es">Nuestro panel en vivo — ventas reales de nuestras tiendas en TikTok Shop México.</span><span class="lang-en">Our live dashboard — real sales from our TikTok Shop Mexico stores.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== START NOW — 2 STEPS ===================== -->
+<section id="empezar" class="alt">
+  <div class="wrap">
+    <div class="section-head" style="max-width:720px;margin-left:auto;margin-right:auto;text-align:center">
+      <div class="kicker"><span class="lang-es">Empieza ahora</span><span class="lang-en">Start now</span></div>
+      <div class="lang-es"><h2>Solo 2 pasos</h2><p>Es súper fácil. Nosotros operamos la tienda, tú ganas.</p></div>
+      <div class="lang-en"><h2>Just 2 steps</h2><p>Super easy. We run the shop, you earn.</p></div>
+    </div>
+    <div class="steps-go">
+      <div class="go-card">
+        <div class="go-num">1</div>
+        <div class="lang-es"><h3>Abre tu tienda en TikTok</h3><p>Regístrate como vendedor en TikTok Shop México. Toma unos minutos.</p></div>
+        <div class="lang-en"><h3>Open your TikTok Shop</h3><p>Register as a seller on TikTok Shop Mexico. Takes a few minutes.</p></div>
+        <a class="btn btn-primary btn-lg" id="go-tiktok" href="#" target="_blank" rel="noopener"><span class="lang-es">🚀 Abrir mi tienda</span><span class="lang-en">🚀 Open my shop</span></a>
+      </div>
+      <div class="go-card">
+        <div class="go-num">2</div>
+        <div class="lang-es"><h3>Contáctanos por WhatsApp</h3><p>Te escribimos y te guiamos para arrancar. (Te pediremos WeChat para coordinar con el equipo — gratis.)</p></div>
+        <div class="lang-en"><h3>Contact us on WhatsApp</h3><p>We'll message you and guide you to get started. (We'll ask for WeChat to coordinate with the team — free.)</p></div>
+        <a class="btn btn-wa btn-lg" id="go-whatsapp" href="#" target="_blank" rel="noopener"><span class="lang-es">Contáctanos por WhatsApp</span><span class="lang-en">Message us on WhatsApp</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -527,26 +564,16 @@
 <!-- ===================== APPLICATION FORM ===================== -->
 <section id="aplicar" class="alt">
   <div class="wrap">
-    <div class="section-head">
-      <div class="kicker"><span class="lang-es">Aplica hoy</span><span class="lang-en">Apply today</span></div>
-      <div class="lang-es"><h2>Aplica para ser socio</h2><p>Estamos abriendo solo unos cuantos lugares para gente de confianza. Déjanos tus datos y te contactamos. Toma 30 segundos.</p></div>
-      <div class="lang-en"><h2>Apply to become a partner</h2><p>We're opening just a few spots for people we trust. Leave your details and we'll reach out. Takes 30 seconds.</p></div>
+    <div class="section-head" style="max-width:680px;margin-left:auto;margin-right:auto;text-align:center">
+      <div class="kicker"><span class="lang-es">Contáctanos</span><span class="lang-en">Contact us</span></div>
+      <div class="lang-es"><h2>¿Dudas? Escríbenos por WhatsApp</h2><p>Estamos abriendo solo unos cuantos lugares para gente de confianza. Te respondemos rápido y te guiamos paso a paso.</p></div>
+      <div class="lang-en"><h2>Questions? Message us on WhatsApp</h2><p>We're opening just a few spots for people we trust. We reply fast and guide you step by step.</p></div>
     </div>
-
-    <form class="apply" id="applyForm" onsubmit="return submitApply(event)">
-      <div class="field full"><label>Nombre / Name</label><input name="name" required></div>
-      <div class="field"><label>Número de teléfono / Phone number</label><input name="phone" type="tel" required></div>
-      <div class="field"><label>WhatsApp</label><input name="whatsapp" type="tel"></div>
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div class="full" style="margin-top:6px">
-        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">
-          <span class="lang-es">Enviar solicitud</span><span class="lang-en">Send application</span>
-        </button>
-      </div>
-    </form>
-    <div id="applyOk" class="card" style="display:none;border-color:var(--green);margin-top:14px">
-      <strong class="lang-es">¡Gracias! 🎉 Recibimos tus datos. Te contactamos muy pronto.</strong>
-      <strong class="lang-en">Thank you! 🎉 We got your details. We'll reach out very soon.</strong>
+    <div style="text-align:center">
+      <a class="btn btn-wa btn-lg" id="wa-apply" href="#" target="_blank" rel="noopener">
+        <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
+        <span class="lang-es">Contáctanos por WhatsApp</span><span class="lang-en">Message us on WhatsApp</span>
+      </a>
     </div>
   </div>
 </section>
@@ -582,11 +609,12 @@
   </div>
 </footer>
 
-<a class="fab" id="wa-fab" href="#" target="_blank" rel="noopener">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
-  WhatsApp
-</a>
-<a class="fab fab-apply" href="#aplicar"><span class="lang-es">✏️ Aplica ya</span><span class="lang-en">✏️ Apply now</span></a>
+<div class="actionbar">
+  <a class="btn btn-primary actionbar-main" href="#empezar"><span class="lang-es">🚀 Abre tu tienda</span><span class="lang-en">🚀 Open your shop</span></a>
+  <a class="btn btn-wa actionbar-wa" id="wa-fab" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg class="svg-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.107z"/></svg>
+  </a>
+</div>
 </div><!-- /no-print -->
 
 
@@ -647,14 +675,17 @@ const CONFIG = {
   contactName:     "Bernardo",
   whatsappNumber:  "12163102050",              // +1 216-310-2050 (Bernardo, temporal)
   phoneDisplay:    "+1 (216) 310-2050",
-  leadEmail:       "bernardo8605@outlook.com", // las solicitudes del formulario llegan a este correo
+  tiktokShopUrl:   "https://seller-mx.tiktok.com/account/register", // ⚠️ link para abrir tienda TikTok Shop MX (o tu link de invitación)
+  wechatUrl:       "https://www.wechat.com/",
+  credsMessage:    "Hola, ya abrí mi TikTok Shop 🎉 Aquí está mi acceso:\nUsuario: \nContraseña: ",
   whatsappMessage: "Hola, vi la página de TikTienda y quiero información para aplicar.",
   siteUrl:         "https://btownone.github.io/tiktienda/" // URL pública (GitHub Pages) → es lo que abre el QR
 };
 /* ============================================================ */
 
 const waHref = "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(CONFIG.whatsappMessage);
-["wa-top","wa-hero","wa-cta","wa-fab"].forEach(function(id){var e=document.getElementById(id); if(e) e.href=waHref;});
+["wa-top","wa-hero","wa-cta","wa-fab","wa-apply","go-whatsapp"].forEach(function(id){var e=document.getElementById(id); if(e) e.href=waHref;});
+var goT=document.getElementById("go-tiktok"); if(goT) goT.href=CONFIG.tiktokShopUrl;
 function setText(id,v){var e=document.getElementById(id); if(e) e.textContent=v;}
 setText("contact-name",CONFIG.contactName); setText("contact-phone",CONFIG.phoneDisplay);
 setText("flyer-name",CONFIG.contactName); setText("flyer-phone",CONFIG.phoneDisplay);
@@ -666,31 +697,7 @@ function makeQR(id,size){
 }
 makeQR("qrcode",170); makeQR("flyer-qr",150);
 
-/* Application form -> emails the lead to CONFIG.leadEmail via FormSubmit (no backend needed).
-   First-ever submission triggers a one-time activation email to that address — click the link once. */
-async function submitApply(e){
-  e.preventDefault();
-  var f=e.target, g=function(n){return (f.elements[n]&&f.elements[n].value||"").trim();};
-  if (f.elements["_honey"] && f.elements["_honey"].value) return false; // bot trap
-  var btn=f.querySelector('button[type="submit"]'); if(btn) btn.disabled=true;
-  var payload={
-    _subject:"Nuevo lead TikTienda 🎉",
-    _template:"table",
-    Nombre:g("name"),
-    Telefono:g("phone"),
-    WhatsApp:g("whatsapp")
-  };
-  try{
-    await fetch("https://formsubmit.co/ajax/"+CONFIG.leadEmail,{
-      method:"POST",
-      headers:{"Content-Type":"application/json","Accept":"application/json"},
-      body:JSON.stringify(payload)
-    });
-  }catch(err){ /* network issue — still show thanks */ }
-  f.style.display="none";
-  var ok=document.getElementById("applyOk"); if(ok) ok.style.display="block";
-  return false;
-}
+/* (Form removed — the flow is now Open Shop + Contact on WhatsApp, no form.) */
 
 /* Language */
 function setLang(lang){
